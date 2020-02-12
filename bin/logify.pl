@@ -58,6 +58,8 @@ sub logLineForDeclaration {
 		$innards .= "return r; ";
 	} else {
 		$innards .= "%orig; ";
+        	#此处应该输入类名和方法名, 类似于%log
+        	$innards .= "HBLogDebug(@\" = void\"); ";
 	}
 	return "$declaration { $innards}\n";
 }
